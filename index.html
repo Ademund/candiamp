@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>candiamp — your Bandcamp collection, on the TV</title>
+  <meta name="description" content="candiamp is an unofficial Android TV client for Bandcamp's Subsonic endpoint. Browse, search and play your own collection with a remote, including Bandcamp Radio and optional Last.fm scrobbling.">
+  <link rel="canonical" href="https://candiamp.tv/">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="candiamp">
+  <meta property="og:url" content="https://candiamp.tv/">
+  <meta property="og:title" content="candiamp — your Bandcamp collection, on the TV">
+  <meta property="og:description" content="An unofficial Android TV client for Bandcamp's Subsonic endpoint. No server in the middle, no Bandcamp account, no browser.">
+  <meta property="og:image" content="https://candiamp.tv/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The candiamp wordmark beside a screenshot of its home screen.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="candiamp — your Bandcamp collection, on the TV">
+  <meta name="twitter:description" content="An unofficial Android TV client for Bandcamp's Subsonic endpoint.">
+  <meta name="twitter:image" content="https://candiamp.tv/images/og.png">
+
+  <link rel="icon" href="images/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+  <link rel="manifest" href="images/icons/site.webmanifest">
+
+  <link rel="preload" as="image" href="images/screens/home.webp">
+  <link rel="stylesheet" href="assets/style.css">
+<script>window.addEventListener("load",function(){var w=window.innerWidth;var out=[];document.querySelectorAll("body *").forEach(function(el){var r=el.getBoundingClientRect();if(r.right>w+1||r.width>w+1){out.push(el.tagName+"."+(el.className||"")+" right="+Math.round(r.right)+" w="+Math.round(r.width));}});document.title="vw="+w+" sw="+document.documentElement.scrollWidth+" || "+out.slice(0,12).join(" ;; ");});</script></head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <a class="brand" href="/" aria-label="candiamp home">
+      <img src="images/logo.webp" alt="candiamp" width="1652" height="592">
+    </a>
+    <nav aria-label="Sections">
+      <a href="#features">What it does</a>
+      <a href="#screens">Screens</a>
+      <a href="#why">Why native</a>
+      <a href="#limits">Limits</a>
+      <a href="#install">Install</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Unofficial Android TV client</p>
+        <h1 id="hero-title">Your Bandcamp collection, on the TV.</h1>
+        <p class="lede">
+          candiamp talks to the Subsonic endpoint Bandcamp shipped in July 2026 — straight from the
+          TV. No server in the middle, no Bandcamp account, no browser in the way.
+        </p>
+        <p class="hero-actions">
+          <a class="button" href="#screens">See the screens</a>
+          <a class="button ghost" href="#install">How to install</a>
+        </p>
+        <p class="note">
+          Working, on a TCL Google TV (Android 14) — sideloaded, and built for a 1080p canvas and a
+          D-pad rather than a pointer.
+        </p>
+      </div>
+      <figure class="hero-shot">
+        <img src="images/screens/home.webp" width="1600" height="900"
+             alt="The candiamp home screen on a dark TV interface: a sidebar with Home, Search, Records, Artists, Radio, Last.fm and Settings, and rows of record covers titled Recently added and Something else.">
+        <figcaption>Home — recently added, then a shuffle.</figcaption>
+      </figure>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <h2 id="features-title">What it does</h2>
+        <p>Everything the collection needs, at a distance of three metres.</p>
+      </div>
+      <ul class="cards">
+        <li>
+          <h3>Browse the collection</h3>
+          <p>Artists → records → tracks, in the order Bandcamp keeps them, cached on disk. Labels sit
+             in the same list as artists, so candiamp marks them and says what they are.</p>
+        </li>
+        <li>
+          <h3>Search what you own</h3>
+          <p><code>search3</code> across your collection with an on-screen keyboard, artist and album
+             details on track results, and playback straight from a result.</p>
+        </li>
+        <li>
+          <h3>Play, and actually seek</h3>
+          <p>256 kbps VBR MP3, and the server answers <code>206 Partial Content</code>, so scrubbing
+             works — ten seconds at a time from the remote.</p>
+        </li>
+        <li>
+          <h3>Leave it playing</h3>
+          <p>A MediaSession keeps audio going when you go back to the TV's home screen, like any other
+             media app. The remote's play and pause keys keep working.</p>
+        </li>
+        <li>
+          <h3>Pair from your phone</h3>
+          <p>The TV serves a small page on your own network and shows a four-character code. Paste the
+             Subsonic credentials from a phone; the password is sealed with the Android keystore.</p>
+        </li>
+        <li>
+          <h3>Bandcamp Radio</h3>
+          <p>Scraped from <code>bandcamp.com/radio</code>, because the API has none. An episode plays as
+             one stream with a timestamped tracklist you can jump around.</p>
+        </li>
+        <li>
+          <h3>Last.fm, if you want it</h3>
+          <p>Link an account and scrobbles go out once a track passes thirty seconds and half its
+             length, through a queue that survives restarts and offline evenings.</p>
+        </li>
+        <li>
+          <h3>Made for a remote</h3>
+          <p>Focus rings, rows that fit a 1080p layout, and OK / play-pause / next / previous / seek.
+             No pointer, no keyboard, no squinting.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="screens" aria-labelledby="screens-title">
+      <div class="section-head">
+        <h2 id="screens-title">Screens</h2>
+        <p>
+          The app running against a demonstration collection. The artists, records and artwork in
+          these shots are invented for the page — no real Bandcamp library is shown.
+        </p>
+      </div>
+      <ul class="gallery">
+        <li>
+          <a class="shot" href="images/screens/records.webp" data-caption="Records — the whole collection, four across, with a no-audio badge on a vinyl-only release.">
+            <img src="images/screens/records.webp" width="1600" height="900" loading="lazy"
+                 alt="Records grid: fifteen covers in four columns, one focused, two carrying a no audio badge.">
+            <span class="shot-caption"><strong>Records</strong><span>The grid, with vinyl-only entries marked no audio.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="shot" href="images/screens/record.webp" data-caption="A record — track list, running time, genre, and Play or Shuffle, with the now-playing bar along the bottom.">
+            <img src="images/screens/record.webp" width="1600" height="900" loading="lazy"
+                 alt="A record page for Night Bus Home by Marta Vey: sleeve, track list with running times, Play and Shuffle buttons, and a now-playing bar.">
+            <span class="shot-caption"><strong>A record</strong><span>Track list, running time, genre, Play or Shuffle.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="shot" href="images/screens/artists.webp" data-caption="Artists — covers come from a record credited to each artist, and the label is called out as a label.">
+            <img src="images/screens/artists.webp" width="1600" height="900" loading="lazy"
+                 alt="Artists screen: eight circular covers with names and record counts, including Second Press marked Label, 5 records.">
+            <span class="shot-caption"><strong>Artists</strong><span>Covers from a record, and labels that admit it.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="shot" href="images/screens/search.webp" data-caption="Search — a query for “NIGHT” across records and tracks, playable without leaving the screen.">
+            <img src="images/screens/search.webp" width="1600" height="900" loading="lazy"
+                 alt="Search screen showing the query NIGHT, a record result for Night Bus Home, and a Tracks section with three matching tracks.">
+            <span class="shot-caption"><strong>Search</strong><span>Records and tracks, playable from the results.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="shot" href="images/screens/player.webp" data-caption="The player — sleeve, title, artist and a progress bar the remote can scrub.">
+            <img src="images/screens/player.webp" width="1600" height="900" loading="lazy"
+                 alt="Full-screen player: large sleeve artwork on the left, track and artist names on the right, a progress bar at 1:13 of 3:51, and the word Playing.">
+            <span class="shot-caption"><strong>The player</strong><span>Big sleeve, honest progress.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="shot" href="images/screens/pairing.webp" data-caption="First run — the TV shows a LAN address and a four-character code; the phone does the typing.">
+            <img src="images/screens/pairing.webp" width="1600" height="900" loading="lazy"
+                 alt="First-run pairing screen: the address http://192.168.8.144:8080, a four-character code, and instructions to paste Subsonic credentials from Bandcamp.">
+            <span class="shot-caption"><strong>First run</strong><span>Type on the phone, not with the remote.</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="why" aria-labelledby="why-title">
+      <div class="section-head">
+        <h2 id="why-title">Why a native app</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Bandcamp's Subsonic endpoint sends <strong>no CORS headers</strong> — not on the response,
+          and not on the preflight. Every browser-based client fails at login, because Chromium refuses
+          to hand a cross-origin response to JavaScript without them. A native client sends no
+          <code>Origin</code> header and is not subject to the policy at all. That is the whole reason
+          candiamp is Kotlin rather than a wrapper.
+        </p>
+        <p>
+          A WebView around <code>bandcamp.com</code> is the other road, and it is a dead end on a TV:
+          no focus order for a D-pad, no media session, and some TV platforms have no browser at all.
+        </p>
+        <details>
+          <summary>The rest of the API, briefly</summary>
+          <p>
+            The endpoint answers in four different shapes — HTTP 500 with an empty body for bad
+            credentials, a JSON error for an unknown endpoint, an empty Subsonic envelope for a stub,
+            and XML for a bad stream id — and candiamp normalises all four. Calls live under
+            <code>/rest/</code> even though the published URL does not. <code>ping</code> says yes to
+            anything, so a connection test asks for the artists instead. And artist artwork has to come
+            from a record, because <code>getArtists</code> hands the same cover to several artists at
+            once.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section id="limits" aria-labelledby="limits-title">
+      <div class="section-head">
+        <h2 id="limits-title">Missing, and why</h2>
+        <p>The gaps come from Bandcamp's endpoint, not from a lack of buttons.</p>
+      </div>
+      <dl class="limits">
+        <div>
+          <dt>Playlists</dt>
+          <dd>Bandcamp exposes <code>getPlaylists</code> but not <code>getPlaylist</code>, so a playlist's tracks cannot be read.</dd>
+        </div>
+        <div>
+          <dt>Favourites and likes</dt>
+          <dd><code>star</code> accepts the request and does nothing; <code>unstar</code> is absent.</dd>
+        </div>
+        <div>
+          <dt>Offline downloads</dt>
+          <dd><code>download</code> returns an error. The API has no download role.</dd>
+        </div>
+        <div>
+          <dt>A quality setting</dt>
+          <dd><code>maxBitRate</code> is ignored. There is one encode, and it is a good one.</dd>
+        </div>
+        <div>
+          <dt>Lyrics, similar artists, song info</dt>
+          <dd>Not implemented by Bandcamp, so not shown here.</dd>
+        </div>
+        <div>
+          <dt>Vinyl-only records</dt>
+          <dd>Listed and marked <em>no audio</em>, with Play hidden — the same as the website shows them.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="install" aria-labelledby="install-title">
+      <div class="section-head">
+        <h2 id="install-title">Install</h2>
+        <p>
+          candiamp is not published anywhere yet, and the source is private for now. This is what it
+          takes to build it and sideload it onto your own TV.
+        </p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>What you need</h3>
+          <p>JDK 21+, the Android SDK (platform 37), <code>adb</code>, and a TV with network debugging turned on.</p>
+        </li>
+        <li>
+          <h3>Connect the TV</h3>
+          <pre><code>adb connect &lt;tv-ip&gt;:5555</code></pre>
+        </li>
+        <li>
+          <h3>Build and install</h3>
+          <pre><code>./gradlew assembleDebug
+adb install -r app/build/outputs/apk/debug/app-debug.apk</code></pre>
+        </li>
+        <li>
+          <h3>Pair it from a phone</h3>
+          <p>
+            The TV shows <code>http://&lt;tv-ip&gt;:8080</code> and a four-character code. Open that
+            address on a phone on the same Wi-Fi, paste the Subsonic credentials from
+            bandcamp.com → Settings → Fan → Subsonic, and press Connect. Nothing leaves the LAN,
+            and the password is sealed with the Android keystore.
+          </p>
+          <p>
+            No Wi-Fi on the TV? Push a file instead — three lines, server, username and password:
+          </p>
+          <pre><code>adb push candiamp.txt /sdcard/Download/candiamp.txt</code></pre>
+          <p>then choose <em>Import a file instead</em> on the pairing screen.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <img src="images/icons/favicon-32x32.png" alt="" width="32" height="32" aria-hidden="true">
+    <div>
+      <p class="foot-first">candiamp — an unofficial Android TV client for Bandcamp's Subsonic endpoint.</p>
+      <p>
+        Unofficial and not affiliated with Bandcamp. Bandcamp is a trademark of Bandcamp, Inc.; the
+        name is used only to say what the app connects to. Last.fm stats are read-only and powered by
+        Last.fm. Screenshots show a demonstration collection — every artist, record and cover in them
+        is invented.
+      </p>
+      <p class="foot-last">© 2026 candiamp</p>
+    </div>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Screenshot">
+    <form method="dialog">
+      <button class="lightbox-close" type="submit" value="close" aria-label="Close">Close</button>
+    </form>
+    <img id="lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" width="1600" height="900">
+    <p id="lightbox-caption"></p>
+  </dialog>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
