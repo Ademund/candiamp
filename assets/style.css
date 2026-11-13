@@ -465,6 +465,25 @@ main > section:not(.hero) {
   font-style: normal;
 }
 
+.limit-shot {
+  margin: 30px 0 0;
+  max-width: 560px;
+}
+
+.limit-shot img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.limit-shot figcaption {
+  margin-top: 10px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 /* Install */
 
 .steps {

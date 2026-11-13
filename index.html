@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>candiamp — your Bandcamp collection, on the TV</title>
-  <meta name="description" content="candiamp is an unofficial Android TV client for Bandcamp's Subsonic endpoint. Browse, search and play your own collection with a remote, including Bandcamp Radio and optional Last.fm scrobbling.">
+  <meta name="description" content="candiamp is an unofficial Android TV client for Bandcamp's Subsonic endpoint. Browse, search and queue your own collection with a remote, including Bandcamp Radio and optional Last.fm scrobbling.">
   <link rel="canonical" href="https://candiamp.tv/">
   <meta name="theme-color" content="#0b0b0c">
   <meta name="color-scheme" content="dark">
@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="candiamp">
   <meta property="og:url" content="https://candiamp.tv/">
   <meta property="og:title" content="candiamp — your Bandcamp collection, on the TV">
-  <meta property="og:description" content="An unofficial Android TV client for Bandcamp's Subsonic endpoint. No server in the middle, no Bandcamp account, no browser.">
+  <meta property="og:description" content="An unofficial Android TV client for Bandcamp's Subsonic endpoint. No server in the middle, no Bandcamp account, no browser — with a real queue and a remote-first player.">
   <meta property="og:image" content="https://candiamp.tv/images/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -32,7 +32,7 @@
 
   <link rel="preload" as="image" href="images/screens/home.webp">
   <link rel="stylesheet" href="assets/style.css">
-<script>window.addEventListener("load",function(){var w=window.innerWidth;var out=[];document.querySelectorAll("body *").forEach(function(el){var r=el.getBoundingClientRect();if(r.right>w+1||r.width>w+1){out.push(el.tagName+"."+(el.className||"")+" right="+Math.round(r.right)+" w="+Math.round(r.width));}});document.title="vw="+w+" sw="+document.documentElement.scrollWidth+" || "+out.slice(0,12).join(" ;; ");});</script></head>
+</head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
@@ -93,7 +93,13 @@
         <li>
           <h3>Play, and actually seek</h3>
           <p>256 kbps VBR MP3, and the server answers <code>206 Partial Content</code>, so scrubbing
-             works — ten seconds at a time from the remote.</p>
+             works — ten seconds at a time. The player carries Previous, Pause and Next buttons, so the
+             media keys are a shortcut rather than a requirement.</p>
+        </li>
+        <li>
+          <h3>A real queue</h3>
+          <p>The player's timeline, played tracks included. Play next or add to queue from a record or
+             any track; long-press a row to move or remove it. The sidebar carries the count.</p>
         </li>
         <li>
           <h3>Leave it playing</h3>
@@ -118,7 +124,8 @@
         <li>
           <h3>Made for a remote</h3>
           <p>Focus rings, rows that fit a 1080p layout, and OK / play-pause / next / previous / seek.
-             No pointer, no keyboard, no squinting.</p>
+             Long-press is the second click, for the queue and every track. No pointer, no keyboard,
+             no squinting.</p>
         </li>
       </ul>
     </section>
@@ -140,31 +147,45 @@
           </a>
         </li>
         <li>
-          <a class="shot" href="images/screens/record.webp" data-caption="A record — track list, running time, genre, and Play or Shuffle, with the now-playing bar along the bottom.">
+          <a class="shot" href="images/screens/record.webp" data-caption="A record — track list, running time, genre, Play or Shuffle, and Play next or Add to queue for the whole record.">
             <img src="images/screens/record.webp" width="1600" height="900" loading="lazy"
-                 alt="A record page for Night Bus Home by Marta Vey: sleeve, track list with running times, Play and Shuffle buttons, and a now-playing bar.">
-            <span class="shot-caption"><strong>A record</strong><span>Track list, running time, genre, Play or Shuffle.</span></span>
+                 alt="A record page for Static in the Kitchen by The Quiet Hours: sleeve, track list with running times, Play and Shuffle, then Play next and Add to queue, with a hint about long-pressing a track.">
+            <span class="shot-caption"><strong>A record</strong><span>Play or Shuffle it, or push the whole record into the queue.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="shot" href="images/screens/queue.webp" data-caption="The queue — the player's timeline, played tracks included, with long-press for move or remove.">
+            <img src="images/screens/queue.webp" width="1600" height="900" loading="lazy"
+                 alt="Queue screen: seven tracks from Static in the Kitchen, the current track marked Playing in pink, earlier tracks dimmed, and a focused row ringed in pink.">
+            <span class="shot-caption"><strong>The queue</strong><span>Played tracks stay; the current one is marked.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="shot" href="images/screens/queue-actions.webp" data-caption="Queue actions — long-press a row to play it now, move it, or remove it.">
+            <img src="images/screens/queue-actions.webp" width="1600" height="900" loading="lazy"
+                 alt="A queue action sheet over the queue: Borrowed Light selected, with Play now, Move down and Remove from queue buttons.">
+            <span class="shot-caption"><strong>Queue actions</strong><span>Long-press a row: play now, move, remove.</span></span>
           </a>
         </li>
         <li>
           <a class="shot" href="images/screens/artists.webp" data-caption="Artists — covers come from a record credited to each artist, and the label is called out as a label.">
             <img src="images/screens/artists.webp" width="1600" height="900" loading="lazy"
                  alt="Artists screen: eight circular covers with names and record counts, including Second Press marked Label, 5 records.">
-            <span class="shot-caption"><strong>Artists</strong><span>Covers from a record, and labels that admit it.</span></span>
+            <span class="shot-caption"><strong>Artists</strong><span>Artist pictures, and labels that admit it.</span></span>
           </a>
         </li>
         <li>
-          <a class="shot" href="images/screens/search.webp" data-caption="Search — a query for “NIGHT” across records and tracks, playable without leaving the screen.">
+          <a class="shot" href="images/screens/search.webp" data-caption="Search — a query for “NIGHT” across records and tracks, playable without leaving the screen; long-press a track to queue it.">
             <img src="images/screens/search.webp" width="1600" height="900" loading="lazy"
                  alt="Search screen showing the query NIGHT, a record result for Night Bus Home, and a Tracks section with three matching tracks.">
             <span class="shot-caption"><strong>Search</strong><span>Records and tracks, playable from the results.</span></span>
           </a>
         </li>
         <li>
-          <a class="shot" href="images/screens/player.webp" data-caption="The player — sleeve, title, artist and a progress bar the remote can scrub.">
+          <a class="shot" href="images/screens/player.webp" data-caption="The player — sleeve, progress, the previous and next entries, and Previous / Pause / Next / Queue buttons.">
             <img src="images/screens/player.webp" width="1600" height="900" loading="lazy"
-                 alt="Full-screen player: large sleeve artwork on the left, track and artist names on the right, a progress bar at 1:13 of 3:51, and the word Playing.">
-            <span class="shot-caption"><strong>The player</strong><span>Big sleeve, honest progress.</span></span>
+                 alt="Full-screen player: sleeve on the left; Four Walls, Backwards by The Quiet Hours on the right with a progress bar, previous and up-next entries, and Previous, Pause, Next and Queue buttons below.">
+            <span class="shot-caption"><strong>The player</strong><span>Big sleeve, the next track in view, the queue one button away.</span></span>
           </a>
         </li>
         <li>
@@ -239,14 +260,18 @@
           <dd>Listed and marked <em>no audio</em>, with Play hidden — the same as the website shows them.</dd>
         </div>
       </dl>
+      <figure class="limit-shot">
+        <img src="images/screens/no-audio.webp" width="1600" height="900" loading="lazy"
+             alt="A record page for Lathe Cuts by Brass Neck, with no Play button and the message: Nothing to stream: Bandcamp lists this release without audio, which is how vinyl-only items appear in a collection.">
+        <figcaption>A vinyl-only record: listed, marked no audio, and honest about why.</figcaption>
+      </figure>
     </section>
 
     <section id="install" aria-labelledby="install-title">
       <div class="section-head">
         <h2 id="install-title">Install</h2>
         <p>
-          candiamp is not published anywhere yet, and the source is private for now. This is what it
-          takes to build it and sideload it onto your own TV.
+          Build it and sideload it onto your own TV.
         </p>
       </div>
       <ol class="steps">
